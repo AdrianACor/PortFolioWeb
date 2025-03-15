@@ -38,7 +38,7 @@
                         <div class="text-content">
                           <h2>Administración básica de gimnasio</h2>
                           <p>Este proyecto está realizado en Visual Studio con Forms en C# y se conecta a una base de datos MySql<br/>
-                            <a href="" class="boton">Link de GitHub</a>
+                            <a href="" class="boton">Proyecto privado</a>
                             </p>
                         </div>
                       </div>
@@ -47,7 +47,7 @@
                         <div class="text-content">
                           <h2>Gestión de Autos que ingresan a un taller automotriz</h2>
                           <p>Este proyecto lo realicé cuando estudiaba en el Tecnológico de Chihuahua II<br/> Fue realizado en Delphi (Object Pascal) y lo actualicé realizándolo completamente en Java conectado a una base de datos MySql.<br/>
-                            <a href="" class="boton">Link de GitHub</a>
+                            <a href="https://github.com/AdrianACor/CarRegister" class="boton" target="_blank">Link de GitHub</a>
                           </p>
                         </div>
                       </div>
@@ -56,7 +56,7 @@
                         <div class="text-content">
                           <h2>ToDo List</h2>
                           <p>Este es un proyecto personal, esta realizado en Angular framework usando Java SpringBoot como backend conectado a una base de datos MySql></br>
-                            <a href="" class="boton">Link de GitHub</a>
+                            <a href="https://github.com/AdrianACor/TodoList" class="boton" target="_blank">Link de GitHub</a>
                           </p>
                         </div>
                       </div>
@@ -125,6 +125,26 @@
         </div>
 
     </div>
+    <script>
+      const slides = document.querySelector('.slides');
+      const indicators = document.querySelectorAll('.navigation label');
+      const totalSlides = indicators.length;
+      let currentIndex = 0;
+  
+      // Función para avanzar el slider
+      function moveSlider() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+  
+        // Actualizar los indicadores
+        indicators.forEach((indicator, index) => {
+          indicator.classList.toggle('active', index === currentIndex);
+        });
+      }
+  
+      // Avanzar automáticamente cada 3 segundos
+      setInterval(moveSlider, 5000);
+    </script>
 </body>
 <br>
 <br>
